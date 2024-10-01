@@ -15,5 +15,5 @@ create table notas (
     data_nota timestamp default current_timestamp,
     prioridade_nota enum('irrelevante','baixa','média','alta','urgente'),
     fk_usuario int,
-    FOREIGN KEY (fk_usuario) REFERENCES usuarios(pk_usuario)
+    FOREIGN KEY (fk_usuario) REFERENCES usuarios(pk_usuario) ON DELETE CASCADE
 );
